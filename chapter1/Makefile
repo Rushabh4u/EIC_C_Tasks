@@ -2,24 +2,23 @@
 CC = gcc
 
 # Compiler flags
-CFLAGS = -g -Wall -Werror -Wextra -I.
+CFLAGS = -g -Wall -Werror -Wextra 
 
 # Common source files
-COMMON_SRC = error_handling.c error_handling.h
 
 # Function to extract all .c files in a given directory
-SRC_DIR = $(wildcard $(DIR)/*.c)
+SRC_DIR = $(wildcard $(DIR)/*.c $(DIR)/*.h)
 
 # Default target
-all: $(EXE) run clean
+all: $(EXE) run
 
 # Rule to compile all .c files in the specified directory along with common files
-$(EXE): $(SRC_DIR) $(COMMON_SRC)
+$(EXE): $(SRC_DIR) 
 	$(CC) $(CFLAGS) -o $(EXE) $^
 	
 # Rule to run the generated executable
 run: $(EXE)
-	.//$(EXE)
+	./$(EXE)
 
 # Clean target
 clean:
