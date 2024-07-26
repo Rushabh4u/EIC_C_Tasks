@@ -8,6 +8,16 @@
 #include<stdio.h>
 
 void main(){
-	printf("Rushabh\cgiri Goswami");
-	return;
+
+	char cChoice; /* For storing user's choice */
+	
+	printf("Do you want to check what happens when printf's argument string contains \c? (y/n): ");
+	scanf("%c", &cChoice);
+	
+	if(cChoice == 'y')
+		printf("\nit simply prints \c \n\n");
+	else if(cChoice == 'n')
+		printf("\nProgram terminated.\n\n");
+	else
+		printf("\nInvalid input!!! PLease enter valid input.\n\n");
 }

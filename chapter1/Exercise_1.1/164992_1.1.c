@@ -6,7 +6,20 @@
 
 //Required libraries
 #include<stdio.h>
+
 void main(){
-	printf("Hello World!\n");
-	return;
+	char cChoice; // for tacking user's concern to run the the function or not.
+	
+	
+		printf("Do you want to execute this Hello World! program (y/n): "); // UI instruction
+		scanf("%c", &cChoice); // Taking user input either y for Yes or n for No.
+		if(cChoice == 'y'){
+			printf("\nHello World!\n\n"); //Prints the message whatever you want
+		}
+		else if(cChoice == 'n'){
+			printf("\nProgram terminated\n\n");
+		}
+		else{
+			printf("\nInvalide input!!! Please enter valid choice.\n\n");	
+		}
 }	
