@@ -4,11 +4,12 @@
 *Created: 22/7/2024
 */
 
-//Required Libraries
+/* Required Libraries */
 #include<stdio.h>
 
 int main(){
 	
+	/* Printing the value of End of File */
 	printf("The value of EOF is %d.\n", EOF);
 	return 0;
 }

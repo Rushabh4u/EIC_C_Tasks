@@ -7,7 +7,7 @@
 //Required Libraries
 #include<stdio.h>
 
-void main(){
+int main(){
 
 	char cChoice; /* For storing user's choice */
 	

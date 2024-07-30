@@ -7,7 +7,7 @@
 //Required libraries
 #include<stdio.h>
 
-void main(){
+int main(){
 	char cChoice; // for tacking user's concern to run the the function or not.
 	
 	
@@ -22,4 +22,5 @@ void main(){
 		else{
 			printf("\nInvalide input!!! Please enter valid choice.\n\n");	
 		}
+		return 0;
 }	
