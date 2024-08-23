@@ -1,7 +1,7 @@
 /*
 *AIM: Revise the main routine of the longest-line program so it will correctly print the length of arbitrary long input lines, and as much as possible of the text.
 *Author: Rushabh Goswami
-*Created: 23/7/2024
+*Created: 30/7/2024
 */
 
 /* Required Libraries */
@@ -42,6 +42,7 @@ int main()
 	 char line[MAXLINE]; /* current input line */ 
 	 char longest[MAXLINE]; /* longest line saved here */ 
 	 max = 0; 
+	 printf("Enter Lines to find the longest one: \n");
 	 while ((len = get_line(line, MAXLINE)) > 0) 
 	 {
 		 if (len > max) 
@@ -51,6 +52,9 @@ int main()
 		 } 
 	}
 	 if (max > 0) /* there was a line */ 
-	 	printf("%s", longest); 
+	 {
+	 	printf("\nThe longest line among these lines is: ");
+	 	printf("%s with length %d\n", longest, max); 
+	 }
 	 return 0; 
  }
