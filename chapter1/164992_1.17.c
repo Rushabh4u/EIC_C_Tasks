@@ -23,7 +23,7 @@ int main()
 	int iCounter = 0; 
 	
 	/* print message */
-	printf("Enter Text to find which line is has more than 8 characters:\n")
+	printf("Enter Text to find which line is has more than 8 characters:\n");
 	
 	/* Take input character by character using getchar */
 	while ((iC = getchar()) != EOF)

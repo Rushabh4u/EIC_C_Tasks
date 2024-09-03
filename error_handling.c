@@ -9,6 +9,9 @@ void handle_error(int error_code) {
         case ERROR_INVALID_INPUT:
             printf("Error: Invalid input entered.\n");
             break;
+        case ERROR_MORE_THAN_EXPECTED:
+        	printf("Error: Elementes entered are more than expected.\n");
+        	break;
         case ERROR_OUT_OF_RANGE:
             printf("Error: Input out of range.\n");
             break;
