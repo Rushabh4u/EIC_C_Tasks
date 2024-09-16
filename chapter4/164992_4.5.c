@@ -189,8 +189,8 @@ int getop(char s[]) {
 
 /*
 * printStack : printing the stack elements
-* Author : Harsh Patel (164975)
-* Created : 27/8/24
+* Author : Rushabh Goswami
+*Created : 23/8/24
 */
 
 void printStack() {
@@ -207,8 +207,8 @@ void printStack() {
 
 /*
 * mathfnc : mathematial operation identification in input and perform operation
-* Author : Harsh Patel (164975)
-* Created : 27/8/24
+* Author : Rushabh Goswami
+*Created : 23/8/24
 */
 
 void mathfnc(char names[]) {

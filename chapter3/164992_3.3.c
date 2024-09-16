@@ -42,9 +42,8 @@ int main()
 
 /*
 * max: expands shorthand notations like a-z in the string Input into the equivalent complete list abc...xyz in Output.
-* Author: Harsh Patel (164975)
-* Created: 23/7/24
-* Modified: 23/7/24
+* Author: Rushabh Goswami
+* Created: 20/8/24
 */
 void expand(char cInput[],char cOutput[]){
 

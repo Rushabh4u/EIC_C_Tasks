@@ -50,8 +50,8 @@ int main()
 
 
 /*reverse: reverse string s in place 
-* Author: Harsh Patel (164975)
-* Created: 23/7/24
+* Author: Rushabh Goswami
+*Created:21/8/24
 */
 void reverse(char cStr[]) {
     int i, j;
@@ -65,8 +65,8 @@ void reverse(char cStr[]) {
 
 
 /* itob: convert n to characters in s with base b
-* Author: Harsh Patel (164975)
-* Created: 23/7/24
+* Author: Rushabh Goswami
+*Created:21/8/24
 */
 void itob(int iInput, char cOutput[],int iBase) {
     int iCounter, isign;

@@ -37,9 +37,8 @@ int main()
 
 
 /* atof: converts the string s to its double precision floating-point equivalent.
-* Author: Harsh Patel (164975)
-* Created: 23/8/24
-* Modified: 23/8/24
+* Author: Rushabh Goswami
+*Created : 23/8/24
 */
 double atof(char s[]) 
 { 

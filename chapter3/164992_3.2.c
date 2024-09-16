@@ -1,6 +1,6 @@
 /*
 Our binary search makes two tests inside the loop, when one would suffice (at the price of more tests outside.) Write a version with only one test inside the loop and measure the difference in run-time. 
- : Rushabh Goswami
+Author : Rushabh Goswami
 Created : 20/8/24
 */
  
@@ -18,11 +18,15 @@ int main()
 
      char cInput[MAXLINE], cOutput[MAXLINE];
 
+	printf("Enter String: ");		/* input message */
+
      mygetline(cInput, MAXLINE);	/* Input */
 
      escape(cInput,cOutput);		/* Function call of escape */
 
-     printf("\n%s", cOutput);		/* Print Output */
+     printf("Escaped String: ");		/* output message */
+     
+     printf("\n%s\n", cOutput);		/* Print Output */
 	
   return 0;
 }
@@ -63,7 +67,7 @@ void escape(char cInput[], char cOutput[]) {
 
 /*
 * mygetline: get whole string line as input
-* Author: Harsh Patel (164975)
+* Author: Rushabh Goswami
 * Created: 20/8/24
 */
 

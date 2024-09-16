@@ -1,0 +1,2 @@
+static library command : sudo make -f Makefile1 install
+

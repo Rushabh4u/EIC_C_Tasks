@@ -1,0 +1,56 @@
+# Define the compiler
+CC = gcc
+ 
+# Define the name of the static library
+LIBNAME = mylib.a
+ 
+# Define the object files for the static library
+OBJS = hello.o here.o bye.o
+ 
+# Define the C compiler flags
+CFLAGS = -g -Wall -ansi
+
+# Where to install
+INSTDIR = /usr/local/bin
+ 
+# The default target
+all: $(LIBNAME)
+ 
+# Rule to create the static library
+$(LIBNAME): $(OBJS)
+	ar rcs $(LIBNAME) $(OBJS)
+ 
+# Rule to compile hello.c into hello.o
+hello.o: hello.c mylib.h
+	$(CC) $(CFLAGS) -c hello.c
+ 
+# Rule to compile here.c into here.o
+here.o: here.c mylib.h
+	$(CC) $(CFLAGS) -c here.c
+ 
+# Rule to compile bye.c into bye.o
+bye.o: bye.c mylib.h
+	$(CC) $(CFLAGS) -c bye.c
+ 
+# Rule to compile bye.c into bye.o
+main.o: main.c mylib.h
+	$(CC) $(CFLAGS) -c main.c
+ 
+#Rule ro compile main.c into main.o
+myapp: main.o $(LIBNAME)
+	$(CC) -o myapp main.o $(LIBNAME)
+ 
+# Clean rule to remove object files and the library
+clean:
+	rm -f $(OBJS) $(LIBNAME)
+	
+install: myapp
+	@if [ -d $(INSTDIR) ]; \
+	then \
+		cp myapp $(INSTDIR);\
+		chmod a+x $(INSTDIR)/myapp;\
+		chmod og-w $(INSTDIR)/myapp;\
+		echo "Installed in $(INSTDIR)";\
+	else \
+		echo "Sorry, $(INSTDIR) does not exist";\
+	fi

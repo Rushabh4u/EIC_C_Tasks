@@ -42,9 +42,8 @@ int main()
 
 
 /* strindex: return index of t in s, -1 if none 
-* Author: Harsh Patel (164975)
-* Created: 23/8/24
-* Modified: 23/8/24
+* Author: Rushabh Goswami
+*Created : 23/8/24
 */
 int mystrindex(char s[],char t[])
 {

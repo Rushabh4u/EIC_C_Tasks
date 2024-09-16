@@ -3,7 +3,7 @@
 handle the largest negative number, that is, the value of n equal to -(2wordsize-1). Explain why 
 not. Modify it to print that value correctly, regardless of the machine on which it runs. 
 *Author : Rushabh Goswami
-*Created:21/8/24
+*Created: 21/8/24
 */
  
 /** required header files */
@@ -41,9 +41,10 @@ int main()
 }
 
 
-/*reverse: reverse string s in place 
-* Author: Harsh Patel (164975)
-* Created: 23/7/24
+/*
+* reverse: reverse string s in place 
+* Author: Rushabh Goswami
+*Created: 21/8/24
 */
 void reverse(char cStr[]) {
     int i, j;
@@ -56,9 +57,10 @@ void reverse(char cStr[]) {
 }
 
 
-/* itoa: convert n to characters in s 
-* Author: Harsh Patel (164975)
-* Created: 23/7/24
+/* 
+* itoa: convert n to characters in s 
+* Author: Rushabh Goswami
+*Created: 21/8/24
 */
 void itoa(int iInput, char cOutput[]) {
     int iCounter, isign;

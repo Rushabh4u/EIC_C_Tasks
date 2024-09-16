@@ -51,7 +51,7 @@ int main()
 
 /*
 *ungetch : removes one character and puts them into a the buffer iBuf
-*Author : Harsh Patel (164975)
+*Author : Rushabh Goswami
 *Created:27/8/24
 */
 void ungetch(int iChar) {
@@ -64,7 +64,7 @@ void ungetch(int iChar) {
 
 /*
 *ungetch : the character from the buffer is read first and it is output on the screen.
-*Author : Harsh Patel (164975)
+*Author : Rushabh Goswami
 *Created:27/8/24
 */
 int getch(){ 

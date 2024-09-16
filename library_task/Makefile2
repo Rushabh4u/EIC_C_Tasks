@@ -1,0 +1,39 @@
+# Compiler and linker
+CC = gcc
+LD = gcc
+ 
+# Compiler flags
+CFLAGS = -fPIC -Wall -g
+ 
+# Linker flags for creating a shared library
+DYNLINKFLAGS = -shared -Wl,-soname,$(LIB_NAME).so.5
+ 
+# Object and library files
+LIB_NAME = mylib
+LIB_FILES = $(LIB_NAME).so
+LIB_MINOR = $(LIB_FILES).5.1
+LIB_RELEASE = $(LIB_MINOR).10
+ 
+# List of object files for the library
+LIB_OBJS = hello.o here.o bye.o
+ 
+# Utility
+RM = rm -rf
+ 
+# Targets
+all: $(LIB_FILES)
+ 
+# Rule to create the shared library
+$(LIB_FILES): $(LIB_OBJS)
+	$(LD) $(DYNLINKFLAGS) -o $(LIB_RELEASE) $(LIB_OBJS)
+	ln -sf $(LIB_RELEASE) $(LIB_MINOR)
+	ln -sf $(LIB_MINOR) $(LIB_FILES)
+	ln -sf $(LIB_FILES) $(LIB_FILES).0
+ 
+# Rule to compile .c files into .o files
+%.o: %.c
+	$(CC) $(CFLAGS) -c $<
+ 
+# Clean up files
+clean:
+	$(RM) $(LIB_OBJS) $(LIB_FILES) $(LIB_RELEASE) $(LIB_MINOR) $(LIB_FILES).0

@@ -50,7 +50,7 @@ int main()
 
 /*
 *ungets :  takes a string as an input and and removes one character at a time from the back of the string and puts them into a the buffer iBufp
-*Author : Harsh Patel (164975)
+*Author : Rushabh Goswami
 *Created:27/8/24
 */
 void ungets(char cInput[]) {
@@ -64,7 +64,7 @@ void ungets(char cInput[]) {
 
 /*
 *ungetch : removes one character at a time and puts them into a the buffer iBufp
-*Author : Harsh Patel (164975)
+*Author : Rushabh Goswami
 *Created:27/8/24
 */
 void ungetch(int iChar) {
@@ -77,7 +77,7 @@ void ungetch(int iChar) {
 
 /*
 *ungetch : the characters from the buffer are read first and it is output on the screen.
-*Author : Harsh Patel (164975)
+*Author : Rushabh Goswami
 *Created:27/8/24
 */
 int getch() { return (iBufp > 0) ? iBuf[--iBufp] : getchar(); }
