@@ -7,7 +7,7 @@
 /* Required Libraries */
 #include <stdio.h> 
 #include <math.h>
-#include "error_handling.h"
+#include "../error_handling.h"
 
 /* Function that returns the value of the integer x rotated by n positions */
 int rightrot(int x, int n);
