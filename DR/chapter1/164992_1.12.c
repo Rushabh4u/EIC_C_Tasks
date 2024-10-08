@@ -2,6 +2,7 @@
 *AIM: Write a program that prints its input one word per line 
 *Author: Rushabh Goswami
 *Created: 22/7/2024
+*Modified: 22/7/2024
 */
 
 /* Required Libraries */

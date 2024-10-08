@@ -2,6 +2,7 @@
 *AIM: Write a program to copy its input to its output, replacing each string of one or more blanks by a single blank.
 *Author: Rushabh Goswami
 *Created: 22/7/2024
+*Modified: 22/7/2024
 */
 
 /* Required Libraries */

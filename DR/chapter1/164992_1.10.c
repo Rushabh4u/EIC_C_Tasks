@@ -2,6 +2,7 @@
 *AIM: Write a program to copy its input to its output, replacing each tab by \t and each backslash by \\. This makes tabs and backspaces visible in an unambiguous way. 
 *Author: Rushabh Goswami
 *Created: 22/7/2024
+*modified: 22/7/2024
 */
 
 /* Required Libraries */

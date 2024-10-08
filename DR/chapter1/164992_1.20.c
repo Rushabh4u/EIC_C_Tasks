@@ -2,6 +2,7 @@
 *AIM: Write a program detab that replaces tabs in the input with the proper number of blanks to space to the next tab stop. Assume a fixed set of tab stops, say every n columns. Should n be a variable or a symbolic parameter?
 *Author: Rushabh Goswami 
 *Created: 2/8/2024
+*Modified: 2/8/2024
 */
 
 /* Required Libraries */
@@ -24,7 +25,7 @@ int main()
 		{
 			if(iC == '\t')
 			{
-				int iIncrement = 8 - (iIndex%8); /* thi variable helps iIndex to increment specific amount of times that for loop s executed */
+				int iIncrement = 8 - (iIndex%8); /* this variable helps iIndex to increment specific amount of times that for loop s executed */
 				for(int i = 0; i < iIncrement; i++)
 				{
 					putchar('*');

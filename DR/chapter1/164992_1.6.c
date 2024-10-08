@@ -2,6 +2,7 @@
 *AIM: Verify that the expression getchar() != EOF is 0 or 1.
 *Author: Rushabh Goswami
 *Created: 22/7/2024
+*Modified: 22/7/2024
 */
 
 /* Required Libraries */

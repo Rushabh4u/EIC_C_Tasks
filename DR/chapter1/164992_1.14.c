@@ -2,6 +2,7 @@
 *AIM: Write a program to print a histogram of the frequencies of different characters in its input.
 *Author: Rushabh Goswami
 *Created: 29/7/2024
+*Modified: 29/7/2024
 */
 
 /* Required Libraries */

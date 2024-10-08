@@ -2,6 +2,7 @@
 *AIM: Write a program to remove trailing blanks and tabs from each line of input, and to delete entirely blank lines..
 *Author: Rushabh Goswami
 *Created: 31/7/2024
+*Modifoed: 31/7/2024
 */
 
 /* Required Libraries */

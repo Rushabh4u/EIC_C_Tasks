@@ -2,6 +2,7 @@
 *AIM: Write a function reverse(s) that reverses the character string s. Use it to write a program that reverses its input a line at a time.
 *Author: Rushabh Goswami
 *Created: 30/7/2024
+*Modified: 30/7/2024
 */
 
 /* Required Libraries */

@@ -2,6 +2,7 @@
 *AIM: Write a program to count blanks, tabs, and newlines.
 *Author: Rushabh Goswami
 *Created: 22/7/2024
+*Modified: 22/7/2024
 */
 
 /* Required Libraries */
