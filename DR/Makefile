@@ -1,38 +1,62 @@
-# Compiler
+# Variables
 CC = gcc
+CFLAGS = -Wall
+SRC_DIR = $(CHAPTER)/src
+INCLUDE_DIR = $(CHAPTER)/include
+BIN_DIR = $(CHAPTER)/bin
+OBJ_DIR = $(CHAPTER)/obj
 
-# Compiler flags
-CFLAGS = -g -Werror -Wall -I.
+# Add include directory for the chapter
+INCLUDE_FLAG = -I$(INCLUDE_DIR)
 
-# Common source files
-COMMON_SRC = error_handling.c error_handling.h
+# Collect all .c files
+SRCS = $(wildcard $(SRC_DIR)/*.c)
+OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
+EXES = $(SRCS:$(SRC_DIR)/%.c=$(BIN_DIR)/%)
 
-# Function to extract all .c files in a given directory
-SRC_DIR = $(DIR)
+# Declare phony targets
+.PHONY: all clean dirs chapter1 chapter2 chapter3 chapter4 run
 
-# Function to remove all exe files in the current directory.
-EXE_FILES = $(wildcard *.out)
+# Default target (must define a chapter target like 'make chapter1')
+all: $(EXES)
 
-# Default target
-all: $(EXE)
+# Rule to compile each .c file into an executable in the bin folder
+$(BIN_DIR)/%: $(OBJ_DIR)/%.o $(INCLUDE_DIR)/error_handling.o
+	$(CC) $(CFLAGS) $(INCLUDE_FLAG) -o $@ $^
 
-# Rule to compile all .c files in the specified directory along with common files
-$(EXE): $(SRC_DIR) $(COMMON_SRC)
-	$(CC) $(CFLAGS) -o $(EXE) $^ -lm
-	
-# Rule to run the generated executable
+# Rule to compile each .c file into an object file in the obj folder
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	$(CC) $(CFLAGS) $(INCLUDE_FLAG) -c $< -o $@
+
+# Rule to compile error_handling.c
+$(INCLUDE_DIR)/error_handling.o: $(INCLUDE_DIR)/error_handling.c
+	$(CC) $(CFLAGS) $(INCLUDE_FLAG) -c $< -o $@
+
+# Create necessary directories if they don't exist
+dirs:
+	mkdir -p $(BIN_DIR)
+	mkdir -p $(OBJ_DIR)
+
+# Clean up object and executable files
+clean:
+	rm -f $(OBJ_DIR)/*.o $(BIN_DIR)/* $(INCLUDE_DIR)/error_handling.o
+
+# Chapter-specific targets
+chapter1:
+	$(MAKE) CHAPTER=chapter1 dirs all
+
+chapter2:
+	$(MAKE) CHAPTER=chapter2 dirs all
+
+chapter3:
+	$(MAKE) CHAPTER=chapter3 dirs all
+
+chapter4:
+	$(MAKE) CHAPTER=chapter4 dirs all
+
+# Run a specific executable in the current chapter's bin directory
 run:
-	./$(EXE)
+	@$(if $(CHAPTER),, $(error CHAPTER not set, run like 'make run CHAPTER=chapter1 EXE=<name_of_exe>'))
+	@$(if $(EXE),, $(error EXE not set, run like 'make run CHAPTER=chapter1 EXE=<name_of_exe>'))
+	./$(CHAPTER)/bin/$(EXE)
 
-# Clean target
-clean: $(EXE_FILES)
-	rm -f $(EXE_FILES)
-
-
-
-
-# To compile an exercise, you need to specify the directory containing the .c files 
-# and the name of the output executable when invoking make. 
-# For example:
-
-# Command ---> make DIR=chapter1/Exercise_1.1 EXE=Exercise_1_1
