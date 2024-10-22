@@ -31,7 +31,7 @@ int main()
 	
 	itoa(iInput,cOutput,iMinFieldWidth);	/* Function call of itoa */
 	
-	printf("String Number : %s",cOutput);
+	printf("Ans : %s",cOutput);
 	
 	printf("\n");
 	printf("Do you want to Run Again [1 for YES / 0 for NO] : "); /* Ask for code run again*/

@@ -28,7 +28,7 @@ int main()
 	
 	
 	
-	printf("String %s found in %s at position : %d",cInputPattern,cInputString,mystrindex(cInputString,cInputPattern));	/* function call and output */
+	printf("String %s found in %s at position : %d",cInputPattern,cInputString,mystrindex(cInputString,cInputPattern)+1);	/* function call and output */
 	
 	printf("\n");
 	printf("Do you want to Run Again [1 for YES / 0 for NO] : "); /* Ask for code run again*/

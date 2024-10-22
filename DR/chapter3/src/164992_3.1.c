@@ -61,7 +61,7 @@ int main()
 			counter--;
 			if(index>0 && iInput[index] < iInput[index-1])
 			{
-				printf("The elements are not sorted. Please listen carefully!!!\n");
+				printf("The elements are not sorted. Please read carefully!!!\n");
 				return -1;
 			} 
 			

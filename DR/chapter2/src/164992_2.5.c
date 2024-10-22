@@ -51,7 +51,7 @@
 		int len = strlen(s1);
 		//char cAns[len];
 		i = 0;
-		while (i < len)
+		while (i < len-1)
 		{
 			iChange = s1[i];
 			if ( iSkip[iChange] != 0  )
@@ -76,7 +76,8 @@ int main()
 		printf("Enter Sencond String: ");
 		fgets(cS2, MAKS, stdin);
 		
-		printf("%d", squeeze(cS1, cS2));
+		int ans = squeeze(cS1, cS2);
+		ans != -1 ? printf("%d", ans) : printf("No duplicate characters found.");
 		printf("\n");
 		 
 
