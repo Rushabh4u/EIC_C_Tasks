@@ -43,20 +43,32 @@ clean:
 
 # Chapter-specific targets
 chapter1:
-	$(MAKE) CHAPTER=chapter1 dirs all
+	$(MAKE) CHAPTER=164992_chapter1 dirs all
 
 chapter2:
-	$(MAKE) CHAPTER=chapter2 dirs all
+	$(MAKE) CHAPTER=164992_chapter2 dirs all
 
 chapter3:
-	$(MAKE) CHAPTER=chapter3 dirs all
+	$(MAKE) CHAPTER=164992_chapter3 dirs all
 
 chapter4:
-	$(MAKE) CHAPTER=chapter4 dirs all
+	$(MAKE) CHAPTER=164992_chapter4 dirs all
+
+chapter5:
+	$(MAKE) CHAPTER=164992_chapter5 dirs all
+
+chapter6:
+	$(MAKE) CHAPTER=164992_chapter6 dirs all
+
+chapter7:
+	$(MAKE) CHAPTER=164992_chapter7 dirs all
+
+chapter8:
+	$(MAKE) CHAPTER=164992_chapter8 dirs all
 
 # Run a specific executable in the current chapter's bin directory
 run:
-	@$(if $(CHAPTER),, $(error CHAPTER not set, run like 'make run CHAPTER=chapter1 EXE=<name_of_exe>'))
-	@$(if $(EXE),, $(error EXE not set, run like 'make run CHAPTER=chapter1 EXE=<name_of_exe>'))
+	@$(if $(CHAPTER),, $(error CHAPTER not set, run like 'make run CHAPTER=164992_chapter1 EXE=<name_of_exe>'))
+	@$(if $(EXE),, $(error EXE not set, run like 'make run CHAPTER=164992_chapter1 EXE=<name_of_exe>'))
 	./$(CHAPTER)/bin/$(EXE)
 

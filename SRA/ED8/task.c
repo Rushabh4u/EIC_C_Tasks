@@ -161,24 +161,29 @@ void removeElement(char *s, Node **head) {
     while (current != NULL && strcmp(current->name, s) != 0) {
         previous = current;
         current = current->next;
-    }
+        
 
-    /* If the item is not found */
-    if (current == NULL) {
-        printf("\"%s\" not found in the list.\n", s);
-        return;
-    }
+		/* If the element to be removed is the first node */
+		if (previous == NULL) {
+		    *head = current->next; /* Move the head to the next node */
+		    return;
+		} else {
+		    previous->next = current->next; /* Bypass the current node */
+    		free(current);
+    		current = previous->next;
+		}
 
-    /* If the element to be removed is the first node */
-    if (previous == NULL) {
-        *head = current->next; /* Move the head to the next node */
-    } else {
-        previous->next = current->next; /* Bypass the current node */
     }
+		        /* If the item is not found */
+		if (current == NULL) {
+		    printf("\"%s\" not found in the list.\n", s);
+		    return;
+		}
 
     /* Free the memory of the removed node */
-    free(current);
     printf("\"%s\" removed from the list.\n", s);
+
+
 }
 
 /* 

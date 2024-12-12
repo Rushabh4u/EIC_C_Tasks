@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Define the output file and PID file
+PIDFILE="/var/run/my_daemon.pid"
+
+# Function to start the daemon
+start() {
+    if [ -f "$PIDFILE" ]; then
+        echo "Daemon is already running (PID: $(cat $PIDFILE))."
+        exit 1
+    fi
+
+    # Start the daemon using & to run it in the background
+    "$0" run & echo $! > "$PIDFILE"
+    echo "Daemon started."
+}
+
+# Function to stop the daemon
+stop() {
+    if [ ! -f "$PIDFILE" ]; then
+        echo "Daemon is not running."
+        exit 1
+    fi
+
+    PID=$(cat "$PIDFILE")
+    kill "$PID"
+    rm -f "$PIDFILE"
+    echo "Daemon stopped."
+}
+
+# Function to run the daemon task
+run() {
+    while true; do
+        echo "Hello, World!" >> out.txt
+        sleep 60  # Sleep for 60 seconds
+    done
+}
+
+# Check for command line arguments
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    run)
+        run
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+        ;;
+esac
+

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+nocasematch_status=$(shopt -p nocasematch)
+shopt -s nocasematch
+
+read -p "Enter a word (e.g., 'Hello'): " input
+
+case "$input" in
+    hello)
+        echo "You said hello!"
+        ;;
+    bye)
+        echo "Goodbye!"
+        ;;
+    *)
+        echo "Unknown input."
+        ;;
+esac
+
+$nocasematch_status
+

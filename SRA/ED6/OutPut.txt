@@ -1,3 +1,6 @@
 1 rushabh k 22 30000
 2 harsh pata 1776 0
 3 j n 0 529267711
+1 Rushabh Kheda 22 302
+2 Harsh Nadiad 23 123
+3 Rushabh Ahm 0 529267711

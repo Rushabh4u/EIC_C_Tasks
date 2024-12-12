@@ -1,3 +1,6 @@
-1 rushabh Goswami 22 30000.00 wall 968274212 387120 gujarat
-2 harsh patel 1776 0.00 wolf 1308923265 387570 nagaland
-3 j h 0 529267712.00 m 69 32 rj
+1 rushabh goswami 22 30000.00 abc 968274212 387570 gujarat
+2 harsh jangid 1776 0.00 xyz 12345 09876 Rajasthan
+3 j jangid 0 529267712.00 hello 98983434 76542 Rajasthan
+4 Rushabh Goswami 22 302.00 Hariyala 353908731 234332 Gujarat
+5 Harsh Patel 23 123.00 idk 123 098 Guj
+6 Rushabh Rushabh 0 529267712.00 PQR 98984554 387120 guj

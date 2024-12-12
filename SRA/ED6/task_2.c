@@ -113,7 +113,7 @@ void add_age_salary(struct Person Persons[], char cSearchName[], int numPersons)
  */
 void file_save(struct Person Persons[]) {
 	/* Open the file in write mode */
-	FILE *fptr = fopen("OutPut.txt", "w"); 
+	FILE *fptr = fopen("OutPut.txt", "a+"); 
 	if (fptr == NULL) { 
 		/* Check if the file could not be opened */
 		printf("Could not open file"); 

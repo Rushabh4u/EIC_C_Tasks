@@ -66,16 +66,18 @@ int searchTown(struct Person persons[], int count, const char *nameToSearch, cha
      * We return 1 to indicate that the search was successful.
      * If no match is found, we return 0 at the end.
      */
+     int c = 0;
     for (int i = 0; i < count; i++) {
         /* Check if the current person's name matches the search name */
         if (strcmp(persons[i].name, nameToSearch) == 0) {
             /* If a match is found, copy the town to townFound */
-            strcpy(townFound, persons[i].town);
-            return 1; /* Return 1 to indicate a successful search */
+            printf("%s\n", persons[i].town);
+            c++;
+            //return 1; /* Return 1 to indicate a successful search */
         }
     }
     /* If the loop finishes without finding a match, return 0 */
-    return 0; /* Return 0 to indicate the person was not found */
+    return c; /* Return 0 to indicate the person was not found */
 }
 
 /*
@@ -125,12 +127,14 @@ int main() {
      * If the function returns 0, we print a message saying the person was 
      * not found.
      */
-    if (searchTown(persons, MAX_PERSONS, searchName, townFound)) {
-        printf("This person lives in %s\n", townFound); /* Person found */
+    if (searchTown(persons, MAX_PERSONS, searchName, townFound) > 0) {
+        //printf("This person lives in %s\n", townFound); /* Person found */
+        return 0;
     } else {
         printf("This person is not found.\n"); /* Person not found */
+        return -1;
     }
 
-    return 0; /* Return 0 to indicate successful execution */
+   // return 0; /* Return 0 to indicate successful execution */
 }
 
